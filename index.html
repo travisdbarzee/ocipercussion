@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://www.paypal.com/sdk/js?client-id=AbNx4aQZuk_Gx13Sx9fPckqcuf_TLgn8ukuvB7Jz7Emxtx-ej-Ao45HYkxf3deIVgvbt4ZitsaAfg2XU&components=buttons"></script>
+    <title>Orange County Independent</title>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <div class="top-left">
+        <a href="#" class="active nav-link" id="home-button">
+          <img src="./images/OCI_Percussion.jpeg" alt="OCI_Percussion" />
+        </a>
+      </div>
+      <div class="links">
+        <a href="" class="nav-link">Home</a>
+        <a href="" class="nav-link">Store</a>
+        <div class="dropdown nav-link">
+          More <i class="fa-solid fa-caret-down"></i>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="./More Dropdown/history.html">History</a></li>
+              <li><a href="#">Testing</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="" class="nav-link nav-box">Donate</a>
+        <a href="" class="nav-link nav-box">Audition</a>
+        <a href="javascript:void(0);" class="icon" onclick="navDropdown()"
+          >&#9776;</a
+        >
+      </div>
+    </div>
+    <div class="title-section">
+      <img src="./images/filler.jpeg" alt="filler" id="title-img" />
+      <h1>OCI24 Percussion Auditions</h1>
+    </div>
+    <div class="audition-info">
+      <div class="audition">
+        <h2>Dates and Locations</h2>
+        <h3>October 8th, October 15th, and October 22nd</h3>
+        <p>La Mirada High School</p>
+        <p>13520 Adelfa Dr.</p>
+        <p>La Mirada, CA</p>
+      </div>
+      <div class="audition">
+        <h2>Fee</h2>
+        <h3>$60</h3>
+        <p>Includes clinic, registration & audition packet</p>
+      </div>
+    </div>
+    <div class="register-now">
+      <h1>Register Now</h1>
+      <img src="./images/OCI_Fancy.jpg" alt="OCI_Percussion" />
+      <div class="buttons">
+        <button class="open-button btn-content" onclick="openForm()">
+          Register Now
+        </button>
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <div id="top-div">
+              <h2>OCI Audition & Clinic</h2>
+              <button type="button" class="cancel" onclick="closeForm()">
+                <i class="fa-regular fa-circle-xmark fa-2x" id="x"></i>
+              </button>
+            </div>
+            <h3 class="form-headers">Contact Information</h3>
+            <div id="contact-info">
+              <input
+                type="text"
+                class="short"
+                placeholder="First Name *"
+                name="fname"
+                required
+              />
+              <input
+                type="text"
+                class="short"
+                placeholder="Last Name *"
+                name="lname"
+                required
+              />
+              <input
+                type="tel"
+                class="short"
+                placeholder="(xxx) xxx-xxxx *"
+                required
+              />
+              <input
+                type="text"
+                class="short"
+                placeholder="Preferred Pronouns"
+                name="pronouns"
+              />
+              <input
+                type="text"
+                class="long"
+                placeholder="Email *"
+                name="email"
+                required
+              />
+            </div>
+            <h3 class="form-headers">Birthdate</h3>
+            <p class="form-details">
+              Please note that participant must not be older than 22 years of
+              age as of 12:01 AM on April 1, 2024
+            </p>
+            <input type="date" id="birthday" name="birthday" required />
+            <h3 class="form-headers">Emergency Contact Info</h3>
+            <div id="emergency-contact">
+              <input
+                type="text"
+                class="long"
+                placeholder="Emergency Contact Name *"
+                name="name"
+                required
+              />
+              <br />
+              <input
+                type="tel"
+                class="short"
+                placeholder="(xxx) xxx-xxxx *"
+                required
+              />
+              <br />
+              <label for="relationship">Relationship*</label><br />
+              <select
+                id="relationship"
+                name="relationship"
+                class="drop-option"
+                required
+              >
+                <option value="parent">Parent</option>
+                <option value="aunt-uncle">Aunt or Uncle</option>
+                <option value="grandparent">Grandparent</option>
+                <option value="friend">Friend</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <h3 class="form-headers">Clinic Info</h3>
+            <div id="clinic-info">
+              <p class="form-details">Please check all that apply to you.</p>
+              <input
+                type="checkbox"
+                name="option1"
+                id="option1"
+                value="option1"
+              />
+              <label for="option1"
+                >I am auditioning for a spot in the Percussion Ensemble.</label
+              ><br />
+              <input
+                type="checkbox"
+                name="option2"
+                id="option2"
+                value="option2"
+              />
+              <label for="option2"
+                >I am most interested in learning and getting better.</label
+              >
+              <br />
+              <br />
+              <label for="section1">1st Section of Choice*</label><br />
+              <select
+                id="section1"
+                name="section1"
+                class="drop-option"
+                required
+              >
+                <option value="bass">Bass</option>
+                <option value="cymbal">Cymbals</option>
+                <option value="drumset">Drum Set</option>
+                <option value="glock">Glockenspiel/bells</option>
+                <option value="marimba">Marimba</option>
+                <option value="rack">Rack</option>
+                <option value="snare">Snare</option>
+                <option value="synth">Synth</option>
+                <option value="tenor">Tenor</option>
+                <option value="vibraphone">Vibraphone</option>
+                <option value="visual">Visual Ensemble</option>
+              </select>
+              <br />
+              <label for="section2">2nd Section of Choice </label><br />
+              <select id="section2" name="section2" class="drop-option">
+                <option value="bass">Bass</option>
+                <option value="cymbal">Cymbals</option>
+                <option value="drumset">Drum Set</option>
+                <option value="glock">Glockenspiel/bells</option>
+                <option value="marimba">Marimba</option>
+                <option value="rack">Rack</option>
+                <option value="snare">Snare</option>
+                <option value="synth">Synth</option>
+                <option value="tenor">Tenor</option>
+                <option value="vibraphone">Vibraphone</option>
+                <option value="visual">Visual Ensemble</option>
+              </select>
+              <br />
+              <label for="tshirt">T-Shirt Size*</label><br />
+              <select id="tshirt" name="tshirt" class="drop-option">
+                <option value="xs">Extra Small</option>
+                <option value="s">Small</option>
+                <option value="m">Medium</option>
+                <option value="l">Large</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+              </select>
+              <br /><br />
+              <label for="diet">Dietary Restrictions</label>
+              <br /><br />
+              <input
+                type="text"
+                id="diet"
+                name="diet"
+                class="long"
+                placeholder="i.e. lactose intolerant, vegetarian, etc."
+              />
+              <br />
+              <label for="performance-history">Experience</label>
+              <p class="form-details">
+                Please list any performance experience you have in pageantry,
+                including previous drum corps, indoor percussion ensmebles,
+                winter guard groups, etc.
+              </p>
+              <textarea name="" id="text-area" class="info"></textarea>
+              <br />
+              <br />
+            </div>
+            <button type="submit" class="btn">
+              Submit & Pay Registration Fee
+            </button>
+            <div id="paypal-button-container"></div>
+            <script>
+              paypal
+                .Buttons({
+                  createOrder() {
+                    fetch(
+                      "https://api-m.sandbox.paypal.com/v2/checkout/orders",
+                      {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                          Authorization: `Bearer A21AAIRhJV0sXHNBVngGkM8A5eCs5HBEud-0VdVsY-y9EMSg7do0ddfL842ri9ysbEtKskctXVBzuxlbytSfWs_ADD-oqrvfg`,
+                        },
+                        body: JSON.stringify({
+                          purchase_units: [
+                            {
+                              amount: {
+                                currency_code: "USD",
+                                value: "60.00",
+                              },
+                              reference_id: "",
+                            },
+                          ],
+                        }).then((response) => {
+                          response.json();
+                        }),
+                      }
+                    );
+                  },
+                })
+                .render("#paypal-button-container");
+            </script>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="faq-header">
+      <h1>FAQ</h1>
+    </div>
+    <div class="faq-section">
+      <div class="faq">
+        <h2>Can I attend the clinics just to learn?</h2>
+        <p>
+          You are welcome to come to the clinics just to learn and experience
+          what OCI is like without actually auditioning. You would come to the
+          clinic and just let the instructor know you do not intend to audition.
+        </p>
+      </div>
+      <div class="faq">
+        <h2>What is the age limit?</h2>
+        <p>
+          As per WGI stipulations, performers shall not be over 22 years of age
+          as of 12:01 AM on April 1, 2024. There is not a bottom age limit to
+          audition or attend the clinics, though most performers who end up
+          making the ensemble tend to be age 18+.
+        </p>
+      </div>
+      <div class="faq">
+        <h2>Can I do a video audition?</h2>
+        <p>
+          We occasionally have performers who live far away submit a video
+          audition, which is approved on a case by case basis. If you're a
+          contender for a spot, you will need to attend the second audition in
+          person. Email Info@ociprecussion.org if you are interested in this
+          option.
+        </p>
+      </div>
+      <div class="faq">
+        <h2>
+          What are the audition requirements for the visual ensemble (VE)?
+        </h2>
+        <p>
+          VE auditionees will be contacted about their audition expectations
+          closer to auditions.
+        </p>
+      </div>
+      <div class="faq">
+        <h2>Can I audition even if I don't live near Orange County?</h2>
+        <p>
+          Yes! We encourage individuals from across the country (or globe!) to
+          participate in our auditions. While OCP mainly practices and performs
+          in SoCal, every year we have members from around the country. In the
+          past, we've also had members from Belgium, Japan, and Colombia. If you
+          earn a spot, you'll have to make arrangements to move to SoCal or
+          drive/carpool if you live within driving distance.
+        </p>
+      </div>
+      <div class="faq">
+        <h2>What is the cost to audition?</h2>
+        <p>
+          The audition fee is $60 and includes clinics, registration, and
+          audition packet.
+        </p>
+      </div>
+    </div>
+    <div class="staff-section">
+      <h1 id="staff-section-title">OCI STAFF</h1>
+      <h1>Design Team & Caption Heads</h1>
+      <div class="designers staff">
+        <div class="designer mugshot-and-info">
+          <a href="./staff-bios/paul-rennick.html">
+            <img
+              src="./images/paul_rennick.jpg"
+              alt="paul-rennick"
+              class="mugshot"
+            />
+          </a>
+          <h2 class="info">Paul Rennick</h2>
+          <p class="title-description">
+            Percussion Arranger and Battery Caption Head
+          </p>
+        </div>
+        <div class="designer mugshot-and-info">
+          <img
+            src="./images/rennick_sandi.png"
+            alt="sandi-rennick"
+            class="mugshot"
+          />
+          <h2 class="info">Sandi Rennick</h2>
+          <p class="info">Front Ensemble Arranger</p>
+        </div>
+        <div class="designer mugshot-and-info">
+          <img src="./images/catherall_james.png" alt="" class="mugshot" />
+          <h2 class="info">James Catherall</h2>
+          <p class="info">Front Ensemble Caption Head</p>
+        </div>
+        <div class="designer mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Steven Estudillo</h2>
+          <p class="info">Visual Designer and Caption Head</p>
+        </div>
+      </div>
+      <h1>Administrators</h1>
+      <div class="administrators staff">
+        <div class="admin mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Admin 1</h2>
+          <p class="info">Admin Title</p>
+        </div>
+        <div class="admin mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Admin 2</h2>
+          <p class="info">Admin Title</p>
+        </div>
+        <div class="admin mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Admin 3</h2>
+          <p class="info">Admin Title</p>
+        </div>
+      </div>
+      <h1>Battery Staff</h1>
+      <div class="battery staff">
+        <div class="btry mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Battery 1</h2>
+          <p class="info">Battery Title</p>
+        </div>
+        <div class="btry mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Battery 2</h2>
+          <p class="info">Battery Title</p>
+        </div>
+        <div class="btry mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Battery 3</h2>
+          <p class="info">Battery Title</p>
+        </div>
+        <div class="btry mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Battery 4</h2>
+          <p class="info">Battery Title</p>
+        </div>
+        <div class="btry mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Battery 5</h2>
+          <p class="info">Battery Title</p>
+        </div>
+        <div class="btry mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Battery 6</h2>
+          <p class="info">Battery Title</p>
+        </div>
+        <div class="btry mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Battery 7</h2>
+          <p class="info">Battery Title</p>
+        </div>
+        <div class="btry mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Battery 8</h2>
+          <p class="info">Battery Title</p>
+        </div>
+      </div>
+      <h1>Front Ensemble Staff</h1>
+      <div class="front-ensemble staff">
+        <div class="fe mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Front Ensemble 1</h2>
+          <p class="info">Front Ensemble Title</p>
+        </div>
+        <div class="fe mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Front Ensemble 2</h2>
+          <p class="info">Front Ensemble Title</p>
+        </div>
+        <div class="fe mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Front Ensemble 3</h2>
+          <p class="info">Front Ensemble Title</p>
+        </div>
+        <div class="fe mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Front Ensemble 4</h2>
+          <p class="info">Front Ensemble Title</p>
+        </div>
+        <div class="fe mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Front Ensemble 5</h2>
+          <p class="info">Front Ensemble Title</p>
+        </div>
+        <div class="fe mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Front Ensemble 6</h2>
+          <p class="info">Front Ensemble Title</p>
+        </div>
+        <div class="fe mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Front Ensemble 7</h2>
+          <p class="info">Front Ensemble Title</p>
+        </div>
+        <div class="fe mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Front Ensemble 8</h2>
+          <p class="info">Front Ensemble Title</p>
+        </div>
+      </div>
+      <h1>Visual Staff</h1>
+      <div class="visual staff">
+        <div class="v mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Visual Staff 1</h2>
+          <p class="info">Visual Staff Title</p>
+        </div>
+        <div class="v mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Visual Staff 2</h2>
+          <p class="info">Visual Staff Title</p>
+        </div>
+        <div class="v mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Visual Staff 3</h2>
+          <p class="info">Visual Staff Title</p>
+        </div>
+        <div class="v mugshot-and-info">
+          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Visual Staff 4</h2>
+          <p class="info">Visual Staff Title</p>
+        </div>
+      </div>
+    </div>
+    <div class="sponsors-section">
+      <h2>OCI Percussion made possible by:</h2>
+      <div class="sponsors">
+        <div class="sponsor">
+          <img src="./images/Vic Firth White Logo.png" alt="vic" class="logo" />
+        </div>
+        <div class="sponsor">
+          <img
+            src="./images/logo_innovative_percussion.png"
+            alt="innovative-perc"
+            class="logo"
+          />
+        </div>
+        <div class="sponsor">
+          <img
+            src="./images/Zildjian White Logo.png"
+            alt="zildjian"
+            class="logo"
+          />
+        </div>
+        <div class="sponsor">
+          <img src="./images/malletech.png" alt="malletech" class="logo" />
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-div">
+        <img src="./images/OCI VECTORS.jpg" alt="oci-dark" id="footer-img" />
+      </div>
+      <div class="socials-container">
+        <a
+          class="social-media facebook"
+          href=""
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <i class="fa-brands fa-square-facebook fa-2x"></i>
+        </a>
+        <a
+          class="social-media instagram"
+          href=""
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <i class="fa-brands fa-square-instagram fa-2x"></i>
+        </a>
+        <a
+          class="social-media twitter"
+          href=""
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <i class="fa-brands fa-square-twitter fa-2x"></i>
+        </a>
+        <a
+          class="social-media youtube"
+          href=""
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <i class="fa-brands fa-square-youtube fa-2x"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="./script.js" charset="UTF-8"></script>
+  </body>
+</html>
