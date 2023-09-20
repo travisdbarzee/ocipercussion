@@ -243,8 +243,8 @@
             <script>
               paypal
                 .Buttons({
-                  createOrder() {
-                    fetch(
+                  async createOrder() {
+                    const response = await fetch(
                       "https://api-m.sandbox.paypal.com/v2/checkout/orders",
                       {
                         method: "POST",
@@ -262,11 +262,11 @@
                               reference_id: "",
                             },
                           ],
-                        }).then((response) => {
-                          response.json();
                         }),
                       }
                     );
+                    const data = response.json();
+                    console.log(data);
                   },
                 })
                 .render("#paypal-button-container");
