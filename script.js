@@ -7,6 +7,14 @@ function navDropdown() {
     }
   }
 
+ var y = document.getElementById('dropdown-btn')
+
+ y.addEventListener("toggle", revealMore)
+
+ function revealMore() {
+y.classList.toggle('visible')
+ }
+
   function scrollFunction() {
     let e = document.getElementById("audition-section");
     e.scrollIntoView({

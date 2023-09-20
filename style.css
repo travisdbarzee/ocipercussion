@@ -71,6 +71,10 @@ body {
   visibility: visible;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .dropdown-content ul {
   margin: 0;
   padding: 0;
@@ -191,7 +195,7 @@ body {
 }
 
 .buttons a {
-  border: 2px solid black;
+  border: 1px solid var(--black);
   text-align: center;
 }
 
@@ -506,9 +510,10 @@ footer {
     padding: 10px 50px;
   }
   .form-container {
+    position: relative;
     top: -100px;
-    right: -225px;
-    width: 90vw;
+    right: 0;
+    width: 95vw;
     padding: 10px 20px;
   }
 
@@ -517,7 +522,7 @@ footer {
     gap: 50px;
   }
   .faq {
-    padding: 5px 50px;
+    padding: 15px 50px;
   }
   #staff-section-title {
     font-size: 32px;
