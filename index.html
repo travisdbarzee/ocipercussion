@@ -23,28 +23,28 @@
         </a>
       </div>
       <div class="links">
-        <a href="" class="nav-link">Home</a>
-        <a href="" class="nav-link">Store</a>
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./store/store.html" class="nav-link">Store</a>
+        <a href="./donate/donate.html" class="nav-link nav-box">Donate</a>
+        <a onclick="scrollFunction()" class="nav-link nav-box">Audition</a>
         <div class="dropdown nav-link">
           More <i class="fa-solid fa-caret-down"></i>
           <div class="dropdown-content">
             <ul>
-              <li><a href="#">About</a></li>
+              <li><a href="./More Dropdown/about.html">About</a></li>
               <li><a href="./More Dropdown/history.html">History</a></li>
-              <li><a href="#">Testing</a></li>
+              <li><a href="https://www.youtube.com/watch?v=JE7gMmSsqoA" target="_blank">Videos</a></li>
             </ul>
           </div>
         </div>
-        <a href="" class="nav-link nav-box">Donate</a>
-        <a href="" class="nav-link nav-box">Audition</a>
         <a href="javascript:void(0);" class="icon" onclick="navDropdown()"
-          >&#9776;</a
+          ><i class="fa-solid fa-bars"></i></a
         >
       </div>
     </div>
     <div class="title-section">
       <img src="./images/filler.jpeg" alt="filler" id="title-img" />
-      <h1>OCI24 Percussion Auditions</h1>
+      <h1>OCI 2024 Percussion Auditions</h1>
     </div>
     <div class="audition-info">
       <div class="audition">
@@ -60,13 +60,15 @@
         <p>Includes clinic, registration & audition packet</p>
       </div>
     </div>
-    <div class="register-now">
+    <div class="register-now" id="audition-section">
       <h1>Register Now</h1>
       <img src="./images/OCI_Fancy.jpg" alt="OCI_Percussion" />
       <div class="buttons">
         <button class="open-button btn-content" onclick="openForm()">
-          Register Now
+          Register
         </button>
+          <a class="open-button btn-content" href="https://account.venmo.com/u/OCI-Percussion1" target="_blank">Pay Fee & Get Audition Packet</a>
+      </div>
         <div class="form-popup" id="myForm">
           <form action="/action_page.php" class="form-container">
             <div id="top-div">
@@ -236,12 +238,12 @@
               <br />
               <br />
             </div>
-            <button type="submit" class="btn">
+            <button type="submit" class="btn" href="mailto:info@ociprecussion.org" onclick="formSubmitted()">
               Submit & Pay Registration Fee
             </button>
-            <div id="paypal-button-container"></div>
+            <!-- <div id="paypal-button-container"></div>
             <script>
-             paypal
+              paypal
                 .Buttons({
                   async createOrder() {
                     const response = await fetch(
@@ -259,10 +261,10 @@
                                 currency_code: "USD",
                                 value: "60.00",
                               },
-                              reference_id: "test",
+                              reference_id: "",
                             },
                           ],
-                        })
+                        }),
                       }
                     );
                     const data = response.json();
@@ -270,10 +272,9 @@
                   },
                 })
                 .render("#paypal-button-container");
-            </script>
+            </script> -->
           </form>
         </div>
-      </div>
     </div>
     <div class="faq-header">
       <h1>FAQ</h1>
@@ -336,29 +337,17 @@
     </div>
     <div class="staff-section">
       <h1 id="staff-section-title">OCI STAFF</h1>
-      <h1>Design Team & Caption Heads</h1>
+      <h1>Designers & Caption Heads</h1>
       <div class="designers staff">
         <div class="designer mugshot-and-info">
-          <a href="./staff-bios/paul-rennick.html">
-            <img
-              src="./images/paul_rennick.jpg"
-              alt="paul-rennick"
-              class="mugshot"
+          <a href="#">
+            <img src="./images/paul_rennick.jpg" alt="paul-rennick" class="mugshot"
             />
           </a>
           <h2 class="info">Paul Rennick</h2>
           <p class="title-description">
-            Percussion Arranger and Battery Caption Head
+            Clincian & Consultant
           </p>
-        </div>
-        <div class="designer mugshot-and-info">
-          <img
-            src="./images/rennick_sandi.png"
-            alt="sandi-rennick"
-            class="mugshot"
-          />
-          <h2 class="info">Sandi Rennick</h2>
-          <p class="info">Front Ensemble Arranger</p>
         </div>
         <div class="designer mugshot-and-info">
           <img src="./images/catherall_james.png" alt="" class="mugshot" />
@@ -366,12 +355,17 @@
           <p class="info">Front Ensemble Caption Head</p>
         </div>
         <div class="designer mugshot-and-info">
+          <img src="./images/Akira-Torrijos.jpg" alt="" class="mugshot" />
+          <h2 class="info">Akira Torrijos</h2>
+          <p class="info">Visual Caption Head</p>
+        </div>
+        <div class="designer mugshot-and-info">
           <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
           <h2 class="info">Steven Estudillo</h2>
-          <p class="info">Visual Designer and Caption Head</p>
+          <p class="info">Program Consultant</p>
         </div>
       </div>
-      <h1>Administrators</h1>
+      <!-- <h1>Administrators</h1>
       <div class="administrators staff">
         <div class="admin mugshot-and-info">
           <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
@@ -387,95 +381,65 @@
           <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
           <h2 class="info">Admin 3</h2>
           <p class="info">Admin Title</p>
-        </div>
+        </div> -->
       </div>
       <h1>Battery Staff</h1>
       <div class="battery staff">
         <div class="btry mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Battery 1</h2>
-          <p class="info">Battery Title</p>
+          <img src="./images/Matt-Gomez.jpg" alt="" class="mugshot" />
+          <h2 class="info">Matt Gomez</h2>
+          <p class="info">Battery Caption Head</p>
         </div>
         <div class="btry mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Battery 2</h2>
-          <p class="info">Battery Title</p>
+          <img src="./images/Dylan-Fisher.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Dylan Fisher</h2>
+          <p class="info">Tenor Instructor</p>
         </div>
         <div class="btry mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Battery 3</h2>
-          <p class="info">Battery Title</p>
+          <img src="./images/Brandon Zackey copy.jpg" alt="" class="mugshot" />
+          <h2 class="info">Brandon Zackey</h2>
+          <p class="info">Tenor Instructor</p>
         </div>
         <div class="btry mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Battery 4</h2>
-          <p class="info">Battery Title</p>
+          <img src="./images/Will-Belford.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Will Belford</h2>
+          <p class="info">Tenor Instructor</p>
         </div>
         <div class="btry mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Battery 5</h2>
-          <p class="info">Battery Title</p>
+          <img src="./images/Eddie-Mijares.png" alt="" class="mugshot" />
+          <h2 class="info">Eddie Mijares</h2>
+          <p class="info">Snare Instructor</p>
         </div>
         <div class="btry mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Battery 6</h2>
-          <p class="info">Battery Title</p>
+          <img src="./images/Carlos_Lujan.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Carlos Lujan</h2>
+          <p class="info">Bass Instructor</p>
         </div>
         <div class="btry mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Battery 7</h2>
-          <p class="info">Battery Title</p>
+          <img src="./images/Kyle-Harry.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Kyle Harry</h2>
+          <p class="info">Bass Instructor</p>
         </div>
         <div class="btry mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Battery 8</h2>
-          <p class="info">Battery Title</p>
+          <img src="./images/Julian_Rojas.jpg" alt="" class="mugshot" />
+          <h2 class="info">Julian Rojas</h2>
+          <p class="info">Cymbal Instructor</p>
         </div>
       </div>
       <h1>Front Ensemble Staff</h1>
       <div class="front-ensemble staff">
         <div class="fe mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Front Ensemble 1</h2>
-          <p class="info">Front Ensemble Title</p>
+          <img src="./images/catherall_james.png" alt="" class="mugshot" />
+          <h2 class="info">James Catherall</h2>
+          <p class="info">Front Ensemble Instructor</p>
         </div>
         <div class="fe mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Front Ensemble 2</h2>
-          <p class="info">Front Ensemble Title</p>
-        </div>
-        <div class="fe mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Front Ensemble 3</h2>
-          <p class="info">Front Ensemble Title</p>
-        </div>
-        <div class="fe mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Front Ensemble 4</h2>
-          <p class="info">Front Ensemble Title</p>
-        </div>
-        <div class="fe mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Front Ensemble 5</h2>
-          <p class="info">Front Ensemble Title</p>
-        </div>
-        <div class="fe mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Front Ensemble 6</h2>
-          <p class="info">Front Ensemble Title</p>
-        </div>
-        <div class="fe mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Front Ensemble 7</h2>
-          <p class="info">Front Ensemble Title</p>
-        </div>
-        <div class="fe mugshot-and-info">
-          <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
-          <h2 class="info">Front Ensemble 8</h2>
-          <p class="info">Front Ensemble Title</p>
+          <img src="./images/Grace_Matthews.jpeg" alt="" class="mugshot" />
+          <h2 class="info">Grace Matthews</h2>
+          <p class="info">Front Ensemble Instructor</p>
         </div>
       </div>
-      <h1>Visual Staff</h1>
+      <!-- <h1>Visual Staff</h1>
       <div class="visual staff">
         <div class="v mugshot-and-info">
           <img src="./images/Steven-Estudillo.jpeg" alt="" class="mugshot" />
@@ -497,7 +461,7 @@
           <h2 class="info">Visual Staff 4</h2>
           <p class="info">Visual Staff Title</p>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="sponsors-section">
       <h2>OCI Percussion made possible by:</h2>

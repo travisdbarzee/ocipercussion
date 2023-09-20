@@ -7,6 +7,15 @@ function navDropdown() {
     }
   }
 
+  function scrollFunction() {
+    let e = document.getElementById("audition-section");
+    e.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+      inline: 'start'
+    });
+  }
+
   const form = document.getElementById("myForm")
 
   function openForm() {
@@ -15,4 +24,8 @@ function navDropdown() {
   
   function closeForm() {
     form.style.display = "none";
+  }
+
+  function formSubmitted() {
+    alert("Thank you!")
   }

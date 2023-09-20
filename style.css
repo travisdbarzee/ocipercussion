@@ -38,6 +38,7 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .topnav .icon {
@@ -77,7 +78,7 @@ body {
 
 .dropdown-content li {
   list-style-type: none;
-  padding: 20px 10px;
+  padding: 15px 10px;
   font-size: 16px;
 }
 
@@ -88,6 +89,7 @@ body {
 .dropdown-content li a {
   color: var(--white);
   text-decoration: none;
+  padding: 20px 55px;
 }
 
 #home-button img {
@@ -125,19 +127,20 @@ body {
 
 .title-section {
   position: relative;
-  margin-top: 100px;
+  margin-top: 8vh;
 }
 
 .title-section img {
-  width: 1000px;
+  width: 100%;
+  position: relative;
 }
 
 .title-section h1 {
   font-size: 40px;
   color: var(--white);
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 25%;
+  left: 25%;
 }
 
 .audition-info {
@@ -160,11 +163,13 @@ body {
 }
 
 .register-now img {
-  width: 500px;
-  border-radius: 20px;
+  width: 90%;
 }
 
 .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 30px 0;
 }
 
@@ -174,15 +179,20 @@ body {
 
 .btn-content {
   width: 240px;
-  height: 40px;
+  height: 70px;
   color: var(--black);
   background-color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   border-color: var(--black);
   text-decoration: none;
   border-radius: 8px;
   padding: 10px;
   cursor: pointer;
+}
+
+.buttons a {
+  border: 2px solid black;
+  text-align: center;
 }
 
 /*Hidden by default */
@@ -333,6 +343,8 @@ body {
 }
 
 .mugshot {
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -406,39 +418,75 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 32px;
+    flex-wrap: wrap;
+  }
   .topnav:hover a {
     transform: none;
   }
   #hero-background-img {
     width: 80%;
   }
-  .topnav a:not(:last-child), .dropbtn {
+  .topnav a:not(:last-child), .topnav .dropdown {
     display: none;
   }
+
   .topnav a.icon {
-    float: right;
-    display: block;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
   }
   .topnav.responsive {
     position: relative fixed;
   }
   .topnav.responsive a.icon {
     position: absolute;
-    right: 0;
-    top: 0;
-    background-color: black;
+    right: 5%;
+    top: 5%;
   }
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
-    background-color: var(--black);
+    border: none;
   }
   .topnav.responsive {
     display: block;
     width: 100%;
     text-align: left;
   }
+
+  .topnav.responsive .dropdown {
+  display: block;
+  width: 50%;
+  text-align: left;
+  }
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: var(--black);
+    left: 10%;
+  }
+
+  .dropdown-content li {
+    list-style-type: none;
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  .dropdown-content li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 20px 55px;
+  }
+
   .top-left {
     margin-left: 0;
   }
@@ -446,4 +494,33 @@ footer {
     float: none;
     margin: 0;
   }
+
+  .title-section h1 {
+    font-size: 24px;
+    color: var(--white);
+    position: absolute;
+    top: 25%;
+    left: 15%;
+  }
+  .audition {
+    padding: 10px 50px;
+  }
+  .form-container {
+    top: -100px;
+    right: -225px;
+    width: 90vw;
+    padding: 10px 20px;
+  }
+
+  .faq-section {
+    margin: 0;
+    gap: 50px;
+  }
+  .faq {
+    padding: 5px 50px;
+  }
+  #staff-section-title {
+    font-size: 32px;
+  }
+
 }
