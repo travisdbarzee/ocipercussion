@@ -243,33 +243,39 @@
             <script>
               paypal
                 .Buttons({
-                  async createOrder() {
-                    const response = await fetch(
-                      "https://api-m.sandbox.paypal.com/v2/checkout/orders",
-                      {
-                        method: "POST",
-                        headers: {
-                          "Content-Type": "application/json",
-                          Authorization: `Bearer A21AAIRhJV0sXHNBVngGkM8A5eCs5HBEud-0VdVsY-y9EMSg7do0ddfL842ri9ysbEtKskctXVBzuxlbytSfWs_ADD-oqrvfg`,
-                        },
-                        body: JSON.stringify({
-                          purchase_units: [
-                            {
-                              amount: {
-                                currency_code: "USD",
-                                value: "60.00",
-                              },
-                              reference_id: "",
-                            },
-                          ],
-                        }),
-                      }
-                    );
-                    const data = response.json();
-                    console.log(data);
+                  createOrder: async (data, actions) => {
+                    try {
+                      const response = 
+                        await fetch("https://api-m.sandbox.paypal.com/v2/checkout/orders", 
+                         {
+                           method: "POST",
+                           headers: {
+                             "Content-Type": "application/json",
+                             Authorization: "Bearer A21AAIRhJV0sXHNBVngGkM8A5eCs5HBEud-0VdVsY-y9EMSg7do0ddfL842ri9ysbEtKskctXVBzuxlbytSfWs_ADD-oqrvfg",
+                           },
+                           body: JSON.stringify({
+                             purchase_units: [
+                               {
+                                 amount: {
+                                   currency_code: "USD",
+                                   value: "60.00",
+                                 },
+                               },
+                             ],
+                           }),
+                         }
+
+                      const details = await response.json();
+                      return details.id;
+                    } catch(error) {
+                      console.error(error);
+                    }
                   },
-                })
-                .render("#paypal-button-container");
+
+                  onError: (err) => {
+                    console.log(err);
+                  }
+                }).render("#paypal-button-container");
             </script>
           </form>
         </div>
