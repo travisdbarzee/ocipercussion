@@ -6,3 +6,11 @@ function navDropdown() {
       x.className = "topnav";
     }
   }
+
+  var y = document.getElementById('dropdown-btn')
+
+  y.addEventListener("toggle", revealMore)
+ 
+  function revealMore() {
+ y.classList.toggle('visible')
+  }

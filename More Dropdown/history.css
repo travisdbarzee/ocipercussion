@@ -137,6 +137,10 @@ body {
     width: 300px;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .container {
     display: flex;
     flex-direction: column;

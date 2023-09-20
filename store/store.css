@@ -124,6 +124,10 @@ body {
   transform: scale(1.15);
 }
 
+.visible {
+  visibility: visible;
+}
+
 h1 {
     display: flex;
     justify-content: center;

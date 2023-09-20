@@ -163,7 +163,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .register-now img {
@@ -246,7 +245,7 @@ body {
 }
 
 .form-container .btn:hover {
-    background-color: var(--orange);
+  background-color: var(--orange);
 }
 
 #top-div {
@@ -259,17 +258,17 @@ body {
 }
 
 #contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .short {
-    width: 49%;
+  width: 49%;
 }
 
 .long {
-    width: 75%;
+  width: 75%;
 }
 
 .drop-option {
@@ -284,7 +283,7 @@ body {
 }
 
 .form-details {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .form-container .cancel {
@@ -310,7 +309,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 25px 50px;
-  margin: 50px 0;
+  margin: 50px 10px;
 }
 
 .faq {
@@ -422,10 +421,10 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-
   h1 {
     font-size: 32px;
     flex-wrap: wrap;
+    text-align: center;
   }
   .topnav:hover a {
     transform: none;
@@ -433,7 +432,8 @@ footer {
   #hero-background-img {
     width: 80%;
   }
-  .topnav a:not(:last-child), .topnav .dropdown {
+  .topnav a:not(:last-child),
+  .topnav .dropdown {
     display: none;
   }
 
@@ -466,12 +466,12 @@ footer {
   }
 
   .topnav.responsive .dropdown {
-  display: block;
-  width: 50%;
-  text-align: left;
+    display: block;
+    width: 50%;
+    text-align: left;
   }
 
-.dropdown-content {
+  .dropdown-content {
     position: absolute;
     top: 100%;
     width: 100%;
@@ -507,7 +507,8 @@ footer {
     left: 15%;
   }
   .audition {
-    padding: 10px 50px;
+    padding: 15px 10px;
+    width: 90vw;
   }
   .form-container {
     position: relative;
@@ -518,14 +519,14 @@ footer {
   }
 
   .faq-section {
-    margin: 0;
+    margin: 0 50px;
     gap: 50px;
   }
   .faq {
-    padding: 15px 50px;
+    padding: 15px 10px;
+    width: 90vw;
   }
   #staff-section-title {
     font-size: 32px;
   }
-
 }
