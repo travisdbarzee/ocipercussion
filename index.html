@@ -70,7 +70,7 @@
           <a class="open-button btn-content" href="https://account.venmo.com/u/OCI-Percussion1" target="_blank">Pay Fee & Get Audition Packet</a>
       </div>
         <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
+          <form action="mailto:info@ociprecussion.org" method="post" class="form-container">
             <div id="top-div">
               <h2>OCI Audition & Clinic</h2>
               <button type="button" class="cancel" onclick="closeForm()">
@@ -237,10 +237,10 @@
               <textarea name="" id="text-area" class="info"></textarea>
               <br />
               <br />
+              <p><i class="fa-solid fa-triangle-exclamation"></i> After clicking "Submit", please click the "Pay Fee & Get Audition Packet" button. </p>
+              <p><i class="fa-solid fa-bell"></i> Audition packet will be emailed within 24 hours of receiving payment.</p>
             </div>
-            <button type="submit" class="btn" href="mailto:info@ociprecussion.org" onclick="formSubmitted()">
-              Submit
-            </button>
+            <input type="submit" value="Submit" class="btn" onclick="formSubmitted()"></input>
             <!-- <div id="paypal-button-container"></div>
             <script>
               paypal
@@ -345,7 +345,7 @@
           </a>
           <h2 class="info">Paul Rennick</h2>
           <p class="title-description">
-            Clincian & Consultant
+            Clinician & Consultant
           </p>
         </div>
         <div class="designer mugshot-and-info">
