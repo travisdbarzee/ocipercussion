@@ -158,6 +158,10 @@ body {
   width: 500px;
 }
 
+.audition h2 {
+  text-decoration: underline;
+}
+
 .register-now {
   display: flex;
   flex-direction: column;
@@ -308,8 +312,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 25px 50px;
   margin: 50px 10px;
+  gap: 0 50px;
 }
 
 .faq {
@@ -520,11 +524,12 @@ footer {
 
   .faq-section {
     margin: 0 50px;
-    gap: 50px;
+    gap: 0;
   }
   .faq {
     padding: 15px 10px;
     width: 90vw;
+    height: auto;
   }
   #staff-section-title {
     font-size: 32px;
