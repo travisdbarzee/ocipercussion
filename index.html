@@ -70,7 +70,7 @@
           <a class="open-button btn-content" href="https://account.venmo.com/u/OCI-Percussion1" target="_blank">Pay Fee & Get Audition Packet</a>
       </div>
         <div class="form-popup" id="myForm">
-          <form action="https://formsubmit.co/orangecountyindependent@gmail.com" method="post" class="form-container">
+          <form action="https://formsubmit.co/orangecountyindependent@gmail.com" method="POST" class="form-container">
             <div id="top-div">
               <h2>OCI Audition & Clinic</h2>
               <button type="button" class="cancel" onclick="closeForm()">
@@ -236,13 +236,13 @@
                 including previous drum corps, indoor percussion ensmebles,
                 winter guard groups, etc.
               </p>
-              <textarea name="" id="text-area" class="info"></textarea>
+              <textarea name="performance-history" id="text-area" class="info"></textarea>
               <br />
               <br />
               <p><i class="fa-solid fa-triangle-exclamation"></i> After clicking "Submit", please click the "Pay Fee & Get Audition Packet" button. </p>
               <p><i class="fa-solid fa-bell"></i> Audition packet will be emailed within 24 hours of receiving payment.</p>
             </div>
-            <input type="submit" value="Submit" class="btn" onclick="formSubmitted()"></input>
+            <button type="submit" class="btn" onclick="formSubmitted()">Submit</button>
             <!-- <div id="paypal-button-container"></div>
             <script>
               paypal
